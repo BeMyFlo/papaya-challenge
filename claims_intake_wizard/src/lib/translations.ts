@@ -1,0 +1,370 @@
+export type Language = "en" | "vi";
+
+export const translations = {
+  en: {
+    // Header & Footer
+    brandTitle: "Papaya Insurtech",
+    brandSubtitle: "Claims Intake Wizard",
+    secureConnection: "Secure Connection",
+    privacyPolicy: "Privacy Policy",
+    termsOfService: "Terms of Service",
+    contactSupport: "Contact Support",
+
+    // General Navigation Buttons
+    back: "Back",
+    continue: "Continue",
+    submit: "Submit Claim",
+    submitting: "Submitting Claim...",
+    edit: "Edit",
+    day: "day",
+    days: "days",
+
+    // Stepper
+    step1: "Claim Type",
+    step2: "Member & Policy",
+    step3: "Diagnosis & Treatment",
+    step4: "Documents",
+    step5: "Review & Submit",
+
+    // Step 1: ClaimTypeStep
+    claimTypeTitle: "What type of claim would you like to file?",
+    claimTypeSubtitle: "Select the category that best describes your medical service. This determines the required documents and information.",
+    requiredDocuments: "Required Documents",
+    optional: "optional",
+    outpatient: "outpatient",
+    inpatient: "inpatient",
+    dental: "dental",
+
+    // Step 2: MemberPolicyStep
+    memberPolicyTitle: "Member & Policy Information",
+    memberPolicySubtitle: "Verify your member details below. All fields are pre-filled from your profile.",
+    policyHolderDetails: "Policy Holder Details",
+    fullName: "Full Name",
+    policyNumber: "Policy Number",
+    memberId: "Member ID",
+    dob: "Date of Birth",
+    email: "Email",
+    phone: "Phone",
+    claimForTitle: "Who is this claim for?",
+    myself: "Myself",
+    myselfDesc: "I am the patient",
+    dependent: "A Dependent",
+    dependentDesc: "Spouse or child",
+    selectDependent: "Select Dependent",
+    spouse: "Spouse",
+    child: "Child",
+
+    // Step 3: DiagnosisTreatmentStep
+    diagnosisTreatmentTitle: "Diagnosis & Treatment Details",
+    diagnosisTreatmentSubtitle: "Provide the medical details for your",
+    claimSuffix: "claim",
+    diagnosisDetailsTitle: "Diagnosis Information",
+    diagnosisDescLabel: "Diagnosis Description",
+    diagnosisDescPlaceholder: "Describe the diagnosis or reason for treatment...",
+    minCharacters: "Minimum 10 characters",
+    icd10Label: "ICD-10 Code",
+    icd10Placeholder: "Search by code or description...",
+    icd10NotFound: "No matching ICD-10 codes found",
+    providerLabel: "Provider / Hospital",
+    providerPlaceholder: "Search for a hospital or clinic...",
+    treatmentDatesTitle: "Treatment Dates",
+    treatmentDateLabel: "Treatment Date",
+    admissionDateLabel: "Admission Date",
+    dischargeDateLabel: "Discharge Date",
+    lengthOfStayLabel: "Length of Stay",
+    lengthOfStayDesc: "Auto-calculated from admission and discharge dates",
+    admissionReasonLabel: "Admission Reason",
+    admissionReasonPlaceholder: "Reason for hospital admission...",
+
+    // Step 4: DocumentUploadStep
+    documentUploadTitle: "Upload Documents",
+    documentUploadSubtitle: "Upload the required documents for your",
+    documentUploadSubtitle2: "claim. Accepted formats: PDF, JPG, PNG (max 10MB each).",
+    majorDentalLabel: "This is a major dental treatment",
+    majorDentalDesc: "Major treatments (crowns, bridges, implants, etc.) require a treatment plan",
+    requiredLabel: "Required",
+    optionalLabel: "Optional",
+    chooseFile: "Choose File",
+    uploading: "Uploading...",
+    missingDocsTitle: "Missing Required Documents",
+    invalidFileType: "Invalid file type. Allowed: PDF, JPG, JPEG, PNG",
+    fileTooLarge: "File too large. Maximum size is",
+
+    // Step 5: ReviewSubmitStep
+    reviewSubmitTitle: "Review & Submit",
+    reviewSubmitSubtitle: "Please review all the information below before submitting your claim.",
+    confirmTitle: "I confirm that the information provided is accurate and complete.",
+    confirmDesc: "By checking this box, you acknowledge that any inaccurate information may delay claim processing.",
+    reviewFieldNameName: "Name",
+    reviewFieldPolicyNumber: "Policy Number",
+    reviewFieldMemberId: "Member ID",
+    reviewFieldDOB: "Date of Birth",
+    reviewFieldEmail: "Email",
+    reviewFieldPhone: "Phone",
+    reviewFieldClaimant: "Claimant",
+    reviewFieldClaimantSelf: "Self",
+    reviewFieldClaimantDependent: "Dependent",
+    reviewFieldDependentName: "Dependent Name",
+    reviewFieldRelationship: "Relationship",
+    reviewFieldDependentDOB: "Dependent DOB",
+    reviewFieldICD10: "ICD-10 Code",
+    reviewFieldProvider: "Provider",
+    reviewFieldDiagnosisDesc: "Diagnosis Description",
+    reviewFieldTreatmentDate: "Treatment Date",
+    reviewFieldAdmissionDate: "Admission Date",
+    reviewFieldDischargeDate: "Discharge Date",
+    reviewFieldLengthOfStay: "Length of Stay",
+    reviewFieldAdmissionReason: "Admission Reason",
+    reviewFieldUploadedDocs: "Uploaded Documents",
+    reviewFieldNoDocs: "No documents uploaded",
+
+    // SuccessScreen
+    successTitle: "Claim Submitted Successfully!",
+    successSubtitle: "Your",
+    successSubtitle2: "claim has been received and is being processed. You'll receive updates via email.",
+    refLabel: "Claim Reference Number",
+    copied: "Copied to clipboard!",
+    nextStepsTitle: "What happens next?",
+    nextSteps1: "Our team will review your claim within 2–3 business days.",
+    nextSteps2: "You'll receive a confirmation email with your reference number.",
+    nextSteps3: "If additional information is needed, we'll reach out to you.",
+    nextSteps4: "Track your claim status anytime using your reference number.",
+    submitAnother: "Submit Another Claim",
+
+    // Errors Map (Validation)
+    "Please select a claim type": "Please select a claim type",
+    "Member name is required": "Member name is required",
+    "Policy number is required": "Policy number is required",
+    "Member ID is required": "Member ID is required",
+    "Date of birth is required": "Date of birth is required",
+    "Please enter a valid email address": "Please enter a valid email address",
+    "Phone number is required": "Phone number is required",
+    "Please select who this claim is for": "Please select who this claim is for",
+    "Please select a dependent": "Please select a dependent",
+    "Please provide at least 10 characters describing the diagnosis": "Please provide at least 10 characters describing the diagnosis",
+    "ICD-10 code is required": "ICD-10 code is required",
+    "ICD-10 description is required": "ICD-10 description is required",
+    "Provider/hospital name is required": "Provider/hospital name is required",
+    "Treatment date is required": "Treatment date is required",
+    "Admission date is required": "Admission date is required",
+    "Discharge date is required": "Discharge date is required",
+    "Admission reason is required": "Admission reason is required",
+    "Discharge date must be on or after admission date": "Discharge date must be on or after admission date",
+    "You must confirm the information is accurate": "You must confirm the information is accurate",
+    "Medical Receipt is required": "Medical Receipt is required",
+    "Discharge Summary is required": "Discharge Summary is required",
+    "Itemized Bill is required": "Itemized Bill is required",
+    "Dental Receipt is required": "Dental Receipt is required",
+    "Treatment Plan is required for major dental treatments": "Treatment Plan is required for major dental treatments",
+    "Network error. Please try again.": "Network error. Please try again.",
+    "Failed to submit claim": "Failed to submit claim",
+  },
+  vi: {
+    // Header & Footer
+    brandTitle: "Papaya Insurtech",
+    brandSubtitle: "Cổng Yêu Cầu Bồi Thường",
+    secureConnection: "Kết Nối An Toàn",
+    privacyPolicy: "Chính Sách Bảo Mật",
+    termsOfService: "Điều Khoản Dịch Vụ",
+    contactSupport: "Hỗ Trợ Khách Hàng",
+
+    // General Navigation Buttons
+    back: "Quay lại",
+    continue: "Tiếp tục",
+    submit: "Gửi Yêu Cầu",
+    submitting: "Đang gửi yêu cầu...",
+    edit: "Sửa",
+    day: "ngày",
+    days: "ngày",
+
+    // Stepper
+    step1: "Loại bồi thường",
+    step2: "Thông tin thành viên",
+    step3: "Chẩn đoán & Điều trị",
+    step4: "Tải chứng từ",
+    step5: "Xem lại & Gửi",
+
+    // Step 1: ClaimTypeStep
+    claimTypeTitle: "Bạn muốn gửi loại yêu cầu bồi thường nào?",
+    claimTypeSubtitle: "Vui lòng chọn danh mục mô tả đúng nhất dịch vụ y tế của bạn. Lựa chọn này sẽ quyết định thông tin và chứng từ cần thiết.",
+    requiredDocuments: "Chứng Từ Yêu Cầu",
+    optional: "không bắt buộc",
+    outpatient: "ngoại trú",
+    inpatient: "nội trú",
+    dental: "nha khoa",
+
+    // Step 2: MemberPolicyStep
+    memberPolicyTitle: "Thông Tin Thành Viên & Hợp Đồng",
+    memberPolicySubtitle: "Vui lòng kiểm tra lại thông tin bên dưới. Tất cả thông tin đã được tự động điền từ hồ sơ của bạn.",
+    policyHolderDetails: "Chi Tiết Chủ Hợp Đồng",
+    fullName: "Họ và Tên",
+    policyNumber: "Số Hợp Đồng",
+    memberId: "Mã Thành Viên",
+    dob: "Ngày Sinh",
+    email: "Email",
+    phone: "Số Điện Thoại",
+    claimForTitle: "Yêu cầu bồi thường này dành cho ai?",
+    myself: "Bản Thân",
+    myselfDesc: "Tôi là người điều trị",
+    dependent: "Người Phụ Thuộc",
+    dependentDesc: "Vợ/Chồng hoặc con cái",
+    selectDependent: "Chọn Người Phụ Thuộc",
+    spouse: "Vợ/Chồng",
+    child: "Con cái",
+
+    // Step 3: DiagnosisTreatmentStep
+    diagnosisTreatmentTitle: "Chi Tiết Chẩn Đoán & Điều Trị",
+    diagnosisTreatmentSubtitle: "Cung cấp thông tin y tế cho yêu cầu bồi thường",
+    claimSuffix: "của bạn",
+    diagnosisDetailsTitle: "Thông Tin Chẩn Đoán",
+    diagnosisDescLabel: "Mô Tả Chẩn Đoán",
+    diagnosisDescPlaceholder: "Mô tả chẩn đoán bệnh hoặc lý do điều trị...",
+    minCharacters: "Tối thiểu 10 ký tự",
+    icd10Label: "Mã ICD-10",
+    icd10Placeholder: "Tìm kiếm bằng mã hoặc mô tả bệnh...",
+    icd10NotFound: "Không tìm thấy mã bệnh ICD-10 phù hợp",
+    providerLabel: "Cơ Sở Điều Trị / Bệnh Viện",
+    providerPlaceholder: "Tìm kiếm bệnh viện hoặc phòng khám...",
+    treatmentDatesTitle: "Thời Gian Điều Trị",
+    treatmentDateLabel: "Ngày Điều Trị",
+    admissionDateLabel: "Ngày Nhập Viện",
+    dischargeDateLabel: "Ngày Ra Viện",
+    lengthOfStayLabel: "Số Ngày Nằm Viện",
+    lengthOfStayDesc: "Tự động tính từ ngày nhập viện và ngày ra viện",
+    admissionReasonLabel: "Lý Do Nhập Viện",
+    admissionReasonPlaceholder: "Lý do nhập viện điều trị nội trú...",
+
+    // Step 4: DocumentUploadStep
+    documentUploadTitle: "Tải Chứng Từ Lên",
+    documentUploadSubtitle: "Tải lên các tài liệu chứng từ cần thiết cho yêu cầu bồi thường",
+    documentUploadSubtitle2: "của bạn. Định dạng được duyệt: PDF, JPG, PNG (tối đa 10MB mỗi file).",
+    majorDentalLabel: "Đây là điều trị nha khoa lớn",
+    majorDentalDesc: "Điều trị lớn (bọc sứ, làm cầu răng, cấy ghép implant...) cần tải thêm Kế hoạch điều trị",
+    requiredLabel: "Bắt buộc",
+    optionalLabel: "Tùy chọn",
+    chooseFile: "Chọn Tệp Tin",
+    uploading: "Đang tải lên...",
+    missingDocsTitle: "Còn Thiếu Chứng Từ Bắt Buộc",
+    invalidFileType: "Định dạng file không hợp lệ. Chỉ nhận: PDF, JPG, JPEG, PNG",
+    fileTooLarge: "Kích thước file quá lớn. Dung lượng tối đa là",
+
+    // Step 5: ReviewSubmitStep
+    reviewSubmitTitle: "Xem Lại & Gửi",
+    reviewSubmitSubtitle: "Vui lòng xem lại toàn bộ thông tin bên dưới trước khi gửi yêu cầu bồi thường.",
+    confirmTitle: "Tôi xác nhận rằng thông tin đã cung cấp là hoàn toàn chính xác và đầy đủ.",
+    confirmDesc: "Bằng việc tích chọn, bạn hiểu rằng mọi thông tin sai lệch có thể làm chậm trễ quá trình xử lý bồi thường.",
+    reviewFieldNameName: "Họ tên",
+    reviewFieldPolicyNumber: "Số hợp đồng",
+    reviewFieldMemberId: "Mã thành viên",
+    reviewFieldDOB: "Ngày sinh",
+    reviewFieldEmail: "Email",
+    reviewFieldPhone: "Số điện thoại",
+    reviewFieldClaimant: "Đối tượng bồi thường",
+    reviewFieldClaimantSelf: "Bản thân",
+    reviewFieldClaimantDependent: "Người phụ thuộc",
+    reviewFieldDependentName: "Tên người phụ thuộc",
+    reviewFieldRelationship: "Quan hệ",
+    reviewFieldDependentDOB: "Ngày sinh người phụ thuộc",
+    reviewFieldICD10: "Mã ICD-10",
+    reviewFieldProvider: "Cơ sở điều trị",
+    reviewFieldDiagnosisDesc: "Mô tả chẩn đoán",
+    reviewFieldTreatmentDate: "Ngày điều trị",
+    reviewFieldAdmissionDate: "Ngày nhập viện",
+    reviewFieldDischargeDate: "Ngày ra viện",
+    reviewFieldLengthOfStay: "Số ngày nằm viện",
+    reviewFieldAdmissionReason: "Lý do nhập viện",
+    reviewFieldUploadedDocs: "Chứng từ đã tải lên",
+    reviewFieldNoDocs: "Chưa có chứng từ nào được tải lên",
+
+    // SuccessScreen
+    successTitle: "Yêu Cầu Đã Gửi Thành Công!",
+    successSubtitle: "Yêu cầu bồi thường",
+    successSubtitle2: "của bạn đã được tiếp nhận và đang tiến hành xử lý. Bạn sẽ nhận được thông tin cập nhật qua email.",
+    refLabel: "Mã Tham Chiếu Yêu Cầu",
+    copied: "Đã sao chép vào bộ nhớ tạm!",
+    nextStepsTitle: "Các bước tiếp theo là gì?",
+    nextSteps1: "Đội ngũ của chúng tôi sẽ xét duyệt yêu cầu trong vòng 2-3 ngày làm việc.",
+    nextSteps2: "Bạn sẽ nhận được email xác nhận kèm theo mã tham chiếu của mình.",
+    nextSteps3: "Nếu cần thêm thông tin bổ sung, chúng tôi sẽ liên hệ trực tiếp với bạn.",
+    nextSteps4: "Bạn có thể theo dõi trạng thái yêu cầu bất kỳ lúc nào bằng mã tham chiếu.",
+    submitAnother: "Gửi Yêu Cầu Khác",
+
+    // Errors Map (Validation)
+    "Please select a claim type": "Vui lòng chọn loại yêu cầu bồi thường",
+    "Member name is required": "Tên thành viên là bắt buộc",
+    "Policy number is required": "Số hợp đồng bảo hiểm là bắt buộc",
+    "Member ID is required": "Mã thành viên là bắt buộc",
+    "Date of birth is required": "Ngày sinh là bắt buộc",
+    "Please enter a valid email address": "Vui lòng nhập địa chỉ email hợp lệ",
+    "Phone number is required": "Số điện thoại là bắt buộc",
+    "Please select who this claim is for": "Vui lòng chọn người yêu cầu bồi thường",
+    "Please select a dependent": "Vui lòng chọn người phụ thuộc",
+    "Please provide at least 10 characters describing the diagnosis": "Vui lòng cung cấp ít nhất 10 ký tự mô tả chẩn đoán",
+    "ICD-10 code is required": "Mã ICD-10 là bắt buộc",
+    "ICD-10 description is required": "Mô tả ICD-10 là bắt buộc",
+    "Provider/hospital name is required": "Tên cơ sở y tế/bệnh viện là bắt buộc",
+    "Treatment date is required": "Ngày điều trị là bắt buộc",
+    "Admission date is required": "Ngày nhập viện là bắt buộc",
+    "Discharge date is required": "Ngày ra viện là bắt buộc",
+    "Admission reason is required": "Lý do nhập viện là bắt buộc",
+    "Discharge date must be on or after admission date": "Ngày ra viện phải bằng hoặc sau ngày nhập viện",
+    "You must confirm the information is accurate": "Bạn phải xác nhận thông tin là chính xác",
+    "Medical Receipt is required": "Biên lai y tế là bắt buộc",
+    "Discharge Summary is required": "Giấy ra viện là bắt buộc",
+    "Itemized Bill is required": "Hóa đơn chi tiết là bắt buộc",
+    "Dental Receipt is required": "Biên lai nha khoa là bắt buộc",
+    "Treatment Plan is required for major dental treatments": "Kế hoạch điều trị là bắt buộc đối với điều trị nha khoa lớn",
+    "Network error. Please try again.": "Lỗi kết nối mạng. Vui lòng thử lại.",
+    "Failed to submit claim": "Gửi yêu cầu bồi thường thất bại",
+  },
+};
+
+export const getClaimTypeInfo = (type: string, lang: Language) => {
+  const info = {
+    outpatient: {
+      title: lang === "en" ? "Outpatient" : "Ngoại trú",
+      description:
+        lang === "en"
+          ? "Doctor visits, consultations, lab tests, and procedures where you don't stay overnight."
+          : "Khám bác sĩ, tư vấn y tế, xét nghiệm và các thủ thuật không lưu trú qua đêm.",
+      requiredDocs: lang === "en" ? ["Medical Receipt"] : ["Biên lai y tế"],
+      optionalDocs: lang === "en" ? ["Prescription"] : ["Đơn thuốc"],
+    },
+    inpatient: {
+      title: lang === "en" ? "Inpatient" : "Nội trú",
+      description:
+        lang === "en"
+          ? "Hospital admissions requiring overnight stay, surgeries, and extended treatments."
+          : "Nhập viện lưu trú qua đêm, phẫu thuật hoặc điều trị kéo dài tại bệnh viện.",
+      requiredDocs:
+        lang === "en"
+          ? ["Discharge Summary", "Itemized Bill", "Medical Receipt"]
+          : ["Giấy ra viện", "Hóa đơn chi tiết", "Biên lai y tế"],
+      optionalDocs: [],
+    },
+    dental: {
+      title: lang === "en" ? "Dental" : "Nha khoa",
+      description:
+        lang === "en"
+          ? "Dental checkups, cleanings, fillings, extractions, and specialized dental procedures."
+          : "Khám nha khoa định kỳ, lấy cao răng, trám răng, nhổ răng và các thủ thuật chuyên sâu.",
+      requiredDocs: lang === "en" ? ["Dental Receipt"] : ["Biên lai nha khoa"],
+      optionalDocs: lang === "en" ? ["Treatment Plan"] : ["Kế hoạch điều trị"],
+    },
+  };
+
+  return info[type as keyof typeof info] || { title: type, description: "", requiredDocs: [], optionalDocs: [] };
+};
+
+export const getDocumentLabel = (docId: string, lang: Language) => {
+  const labels: Record<string, { en: string; vi: string }> = {
+    "medical-receipt": { en: "Medical Receipt", vi: "Biên lai y tế" },
+    "prescription": { en: "Prescription", vi: "Đơn thuốc" },
+    "discharge-summary": { en: "Discharge Summary", vi: "Giấy ra viện" },
+    "itemized-bill": { en: "Itemized Bill", vi: "Hóa đơn chi tiết" },
+    "dental-receipt": { en: "Dental Receipt", vi: "Biên lai nha khoa" },
+    "treatment-plan": { en: "Treatment Plan", vi: "Kế hoạch điều trị" },
+  };
+
+  return labels[docId]?.[lang] || docId;
+};
