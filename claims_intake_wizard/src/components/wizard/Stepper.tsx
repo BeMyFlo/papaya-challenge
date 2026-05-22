@@ -51,9 +51,9 @@ export default function Stepper({ currentStep }: StepperProps) {
                   "w-10 h-10 rounded-full flex items-center justify-center text-sm font-semibold transition-all duration-300 border-2",
                   isCompleted
                     ? "bg-primary border-primary text-white"
-                    : "isCurrent" && isCurrent
-                    ? "bg-white border-primary text-primary shadow-[0_0_0_4px_rgba(15,118,110,0.12)]"
-                    : "bg-white border-border text-muted"
+                    : isCurrent
+                      ? "bg-white border-primary text-primary shadow-[0_0_0_4px_rgba(15,118,110,0.12)]"
+                      : "bg-white border-border text-muted"
                 )}
               >
                 {isCompleted ? (
